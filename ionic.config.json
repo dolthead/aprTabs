@@ -1,0 +1,7 @@
+{
+  "name": "aprTabs",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
