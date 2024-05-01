@@ -20,6 +20,17 @@ export const routes: Routes = [
         path: 'tab3',
         loadComponent: () =>
           import('../tab3/tab3.page').then((m) => m.Tab3Page),
+        pathMatch: 'full',
+      },
+      {
+        path: 'tab3/detail/:pokename',
+        loadComponent: () =>
+          import('../tab3/detail/detail.page').then((m) => m.DetailPage),
+      },
+      {
+        path: 'tab4',
+        loadComponent: () =>
+          import('../tab4/tab4.page').then((m) => m.Tab4Page),
       },
       {
         path: '',

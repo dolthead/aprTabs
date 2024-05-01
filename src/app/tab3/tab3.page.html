@@ -7,11 +7,16 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <form>
+    <ion-list>
+      <ion-searchbar name="searchBar" (ionInput)="filterItems($event)" 
+        [debounce]="300"></ion-searchbar>
+      <ion-item *ngFor="let pokemon of filteredList" 
+        [routerLink]="'./detail/' + pokemon.name" lines="full" detail>
+        <h2>{{ pokemon.name | titlecase }}</h2>
+      </ion-item>
+    </ion-list>
+  </form>
+
 </ion-content>

@@ -1,0 +1,65 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-buttons>
+    <ion-button [ngStyle]="avatarButtonStyle" (click)="clickAvatar(pokename!)">
+      <ion-img [src]="pokeDetails?.sprites?.front_default" style="height: 60vw; width: 60vw; max-height: 200px; max-width: 200px;"></ion-img>
+    </ion-button>
+  </ion-buttons>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ pokename | titlecase }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content class="ion-justify-content-center">
+
+      <ion-grid>
+
+        <ion-row>
+          <ion-col size="4">Species</ion-col>
+          <ion-col>
+            {{ pokeDetails?.species.name | titlecase }}
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="4">Weight</ion-col>
+          <ion-col>
+            {{ pokeDetails?.weight | number }} kg
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="4">Abilities</ion-col>
+          <ion-col>
+            <span *ngFor="let ability of pokeDetails?.abilities; let isLast = last">
+              {{ ability?.ability.name }}{{ isLast ? "" : ", " }}
+            </span>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="4">Types</ion-col>
+          <ion-col>
+            <span *ngFor="let pokeType of pokeDetails?.types; let isLast = last">
+              {{ pokeType?.type.name }}{{ isLast ? "" : ", " }}
+            </span>
+          </ion-col>
+        </ion-row>
+
+      </ion-grid>
+
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>
