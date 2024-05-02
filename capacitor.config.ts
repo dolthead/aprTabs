@@ -1,8 +1,8 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'aprTabs',
+  appId: 'com.simplybest.thale.maytabs',
+  appName: 'MTech Tabs',
   webDir: 'www'
 };
 
