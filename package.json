@@ -11,7 +11,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "assets": "npx @capacitor/assets generate --assetPath src/assets",
-    "pwa": "npx http-server-spa www ./index.html 8200"
+    "pwa": "npx http-server-spa www ./index.html 8200",
+    "add-mobile": "npx cap add android && npx cap add ios"
   },
   "private": true,
   "dependencies": {

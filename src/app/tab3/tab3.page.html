@@ -8,12 +8,11 @@
 
 <ion-content [fullscreen]="true">
 
+  <ion-progress-bar type="indeterminate" [hidden]="!isLoading"></ion-progress-bar>
   <form>
     <ion-list>
-      <ion-searchbar name="searchBar" (ionInput)="filterItems($event)" 
-        [debounce]="300"></ion-searchbar>
-      <ion-item *ngFor="let pokemon of filteredList" 
-        [routerLink]="'./detail/' + pokemon.name" lines="full" detail>
+      <ion-searchbar name="searchBar" (ionInput)="filterItems($event)" [debounce]="300"></ion-searchbar>
+      <ion-item *ngFor="let pokemon of filteredList" [routerLink]="'./detail/' + pokemon.name" lines="full" detail>
         <h2>{{ pokemon.name | titlecase }}</h2>
       </ion-item>
     </ion-list>

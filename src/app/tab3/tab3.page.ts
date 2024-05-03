@@ -1,7 +1,7 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit, inject } from '@angular/core';
 import { take } from 'rxjs/operators';
-import { IonList, IonItem, IonHeader, IonToolbar, IonTitle, IonContent, IonSearchbar } from '@ionic/angular/standalone';
+import { IonList, IonItem, IonHeader, IonToolbar, IonTitle, IonContent, IonSearchbar, IonProgressBar, IonButton } from '@ionic/angular/standalone';
 import { RouterLink } from '@angular/router';
 import { CommonModule, TitleCasePipe } from '@angular/common';
 
@@ -10,7 +10,7 @@ import { CommonModule, TitleCasePipe } from '@angular/common';
   templateUrl: 'tab3.page.html',
   styleUrls: ['tab3.page.scss'],
   standalone: true,
-  imports: [ HttpClientModule, CommonModule, TitleCasePipe, RouterLink, IonList, IonItem, IonSearchbar, IonHeader, IonToolbar, IonTitle, IonContent],
+  imports: [IonButton, IonProgressBar,  HttpClientModule, CommonModule, TitleCasePipe, RouterLink, IonList, IonItem, IonSearchbar, IonHeader, IonToolbar, IonTitle, IonContent],
 })
 export class Tab3Page implements OnInit {
 
