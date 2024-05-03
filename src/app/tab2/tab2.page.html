@@ -6,10 +6,20 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
   
-  <ion-button expand="block" color="secondary" (click)="shareNow()">Share</ion-button>
+  <ion-button expand="block" color="secondary" 
+    (click)="shareNow()">Share</ion-button>
   
-  <ion-button expand="block" color="tertiary" (click)="sharePhotos()">Share Photos</ion-button>
+  <ion-button expand="block" color="tertiary" 
+    (click)="sharePhotos()">Share Photos</ion-button>
   
+  <br>
+  <ion-input placeholder="Enter Badge Count" label="Badge Count"
+    type="number" [(ngModel)]="badgeCount"></ion-input>
+  <ion-button expand="block" color="primary" 
+    (click)="setBadge()">Set Badge Count</ion-button>
+  <ion-button expand="block" color="primary" 
+    (click)="clearBadge()">Clear Badge Count</ion-button>
+
 </ion-content>
